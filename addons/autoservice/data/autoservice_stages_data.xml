@@ -1,0 +1,45 @@
+<openerp>
+    <data 	noupdate="1">
+
+        <record id="autoservice.stages_Draft" model="autoservice.stages">
+            <field name="id">1</field>
+            <field name="stage">Draft</field>
+            <field name="stage_descr">Draft AsO</field>
+            <field name="stage_sequence">10</field>
+            <field name="stage_value">01</field>
+        </record>
+
+        <record id="autoservice.stages_New" model="autoservice.stages">
+            <field name="id">2</field>
+            <field name="stage">New</field>
+            <field name="stage_descr">New.Order is in shedule.</field>
+            <field name="stage_sequence">20</field>
+            <field name="stage_value">05</field>
+        </record>
+
+        <record id="autoservice.stages_In_progres" model="autoservice.stages">
+            <field name="id">4</field>
+            <field name="stage">In progres</field>
+            <field name="stage_descr">In progres</field>
+            <field name="stage_sequence">30</field>
+            <field name="stage_value">10</field>
+        </record>
+
+        <record id="autoservice.stages_Compleated" model="autoservice.stages">
+            <field name="id">6</field>
+            <field name="stage">Compleated</field>
+            <field name="stage_descr">Compleated.Work is done.Ready for quality inspection and tests.</field>
+            <field name="stage_sequence">40</field>
+            <field name="stage_value">95</field>
+        </record>
+
+        <record id="autoservice.stages_Finished" model="autoservice.stages">
+            <field name="id">7</field>
+            <field name="stage">Finished</field>
+            <field name="stage_descr">Finished - all work is done, inspections pass.Vehicle is ready for client.</field>
+            <field name="stage_sequence">60</field>
+            <field name="stage_value">100</field>
+        </record>
+
+    </data>
+</openerp>

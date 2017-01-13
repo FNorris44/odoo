@@ -1,0 +1,36 @@
+# Change Log
+All notable changes to this project will be documented in this file.
+Auto service module for Odoo
+Author  Antoan Georgiev  expocarbg@gmail.com
+
+
+## [Unreleased]
+### Added
+-
+### Changed
+-
+### Deprecated
+-
+### Removed
+-
+### Fixed
+-
+### Security
+-
+
+## [0.9.5.beta] - 2017-01-05
+### Added
+-this file (changelog) @ageorgiev
+-convert order operations to tasks logic (button now works) @ageorgiev
+-short help text in operation tabs @ageorgiev
+-contract conditions on order notepad page @ageorgiev
+### Changed
+-renamed notepad pages @ageorgiev
+-improved domain on contract dropdown in order  @ageorgiev
+-index.html  @ageorgiev
+### Fixed
+-close order button domain on invisible attr.  @ageorgiev
+-in model Warning to UserError (new API)  @ageorgiev
+
+
+Format of this file was inspired from great work no this project: http://keepachangelog.com/en/0.3.0/

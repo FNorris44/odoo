@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_autoservice_autoservice,autoservice.autoservice,model_autoservice_autoservice,,1,1,1,1
+access_autoservice_orders,autoservice.orders,model_autoservice_orders,,1,1,1,1
+access_autoservice_vehicles,autoservice.vehicles,model_autoservice_vehicles,,1,1,1,1
+access_autoservice_stages,autoservice.stages,model_autoservice_stages,,1,1,1,1
+access_autoservice_operation,autoservice.operation,model_autoservice_operation,,1,1,1,1
+access_autoservice_sets,autoservice.sets,model_autoservice_sets,,1,1,1,1

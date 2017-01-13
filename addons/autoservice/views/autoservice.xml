@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+
+        <!-- orders  ================================================================= -->
+        <!-- explicit orders list view definition-->
+        <record model="ir.ui.view" id="autoservice.orders_list">
+            <field name="name">Orders list</field>
+            <field name="model">autoservice.orders</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nom" />
+                    <field name="ref_nom"  />
+                    <field name="vhk_id"/>
+
+                    <field name="customer_id"/>
+                    <field name="resp_user_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- order form  -->
+        <record model='ir.ui.view' id='autoservice.orders_form'>
+        <field name="name">autoservice.orders.form</field>
+        <field name="model">autoservice.orders</field>
+        <field name="arch" type="xml">
+            <form string="Order">
+                <header>
+
+                    <button 
+                            name="action_order_reopen"  type="object" class="oe_highlight" string="Reopen order" icon= "fa-undo"
+                            confirm="Are you sure you want to reopen order?"
+                            attrs= "{'invisible': [['closed', '=', False]]}">
+                    </button>
+                    <button 
+                            name="action_order_close"  type="object" class="oe_highlight" string="Close order"
+                            icon= "fa-power-off" attrs= "{'invisible':
+                            ['|', '|',
+                            '&amp;', ('stage_id', '!=', 5), ('cancel', '=', False),
+                            '&amp;', ('cancel', '=', False), ('closed', '=', True),
+                            '&amp;', ('cancel', '=', True), ('closed', '=', True)]}">
+                    </button>
+                    <button 
+                            name="action_order_cancel"  type="object" class="oe_highlight" string="Cancel order2"
+                            icon= "fa-ban" attrs= "{'invisible':
+                            ['|',
+                            ['cancel', '=', True], ['stage_id', '=', 5]]}">
+                    </button>
+                    <button 
+                            name="action_order_uncancel"  type="object" class="oe_highlight" string="Unancel order"
+                            icon= "fa-check" attrs= "{'invisible': ['|', ['cancel', '=', False], ['closed', '=', True]]}">
+                    </button>
+                    <button 
+                            name="action_hold"  type="object" class="oe_highlight" string="Pause order"
+                            icon= "fa-pause" attrs= "{'invisible':
+                            ['|', '|', '|',
+                            ['cancel', '=', True], ['closed', '=', True], ['on_hold', '=', True], ['stage_id', 'not in', [2, 3, 4]]]}">
+                    </button>
+                    <button 
+                            name="action_unhold"  type="object" class="oe_highlight" string="Release order"
+                            icon= "fa-play" attrs= "{'invisible': [['on_hold', '=', False]]}">
+                    </button>
+                    <button 
+                            name="action_set_stage_new"  type="object" class="oe_highlight" string="Set stage New"
+                            icon= "fa-play" attrs= "{'invisible':
+                            ['|', '|', '|',
+                            ['stage_id', 'not in', [1]], ['cancel', '=', True], ['closed', '=', True], ['on_hold', '=', True]]}"/>
+                    <button 
+                            name="action_set_stage_inprogres"  type="object" class="oe_highlight" string="Set stage In progres"
+                            icon= "fa-play" attrs= "{'invisible':
+                            ['|', '|', '|',
+                            ['stage_id', 'not in', [2]], ['cancel', '=', True], ['closed', '=', True], ['on_hold', '=', True]]}"/>
+                    <button 
+                            name="action_set_stage_compleated"  type="object" class="oe_highlight" string="Set stage Compleated"
+                            icon= "fa-stop" attrs= "{'invisible':
+                            ['|', '|', '|',
+                            ['stage_id', 'not in', [3]], ['cancel', '=', True], ['closed', '=', True], ['on_hold', '=', True]]}"/>
+                    <button 
+                            name="action_set_stage_finished"  type="object" class="oe_highlight" string="Set stage Finished"
+                            icon= "fa-circle" attrs= "{'invisible':
+                            ['|', '|', '|',
+                            ['stage_id', 'not in', [4]], ['cancel', '=', True], ['closed', '=', True], ['on_hold', '=', True]]}"/>
+
+
+                    <field name="stage_id"  widget="statusbar" statusbar_colors='{"1":"#C8342B", "2":"#C8342B"}' />
+
+                </header>
+
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                      
+                    </div>
+                    
+                    <div class="oe_title">
+                        <label for="nom" class="oe_edit_only"/>
+                        <h2 class="o_row">
+                            <field name="priority" widget="priority"/>
+                            <field name="nom"  string="Service order" placeholder="e.g. YY MM No__" attrs="{'readonly': ['|', ('main_data_lock', '=', True), ('form_data_lock', '=', True)]}"/>
+                        </h2>
+                        <label for="ref_nom" string="Referent No" class="oe_edit_only"/>
+                        <h3>
+                            <field name="ref_nom" class="oe_inline" placeholder="e.g. claim No" attrs="{'readonly': [('form_data_lock', '=', True)]}"/>
+                        </h3>
+                        <label for="customer_id" string="Customer" class="oe_edit_only"/>
+                        <h3>
+                            <field name="customer_id" class="oe_inline" placeholder="Customer" domain="[('customer', '=', True)]" attrs="{'readonly': [('form_data_lock', '=', True)]}"/>
+                        </h3>
+                    </div>
+                    <group col="2">
+                        <group string="Vehicle">
+                            <field name="vhk_id" attrs="{'readonly': ['|', ('main_data_lock', '=', True), ('form_data_lock', '=', True)]}"/>
+                        </group>
+                        <group string="Responsible manager">
+                            <field name="resp_user_id" string="Order manager" placeholder="responsible user" attrs="{'readonly': [('form_data_lock', '=', True)]}" />
+                        </group>
+                    </group>
+                    <group col="2">
+                        <group string="Related project">
+                            <field name="project_id" placeholder="Project (Analytic account)" attrs="{'readonly': ['|', ('main_data_lock', '=', True), ('form_data_lock', '=', True)]}"/>
+                        </group>
+                        <group string="Contract" >
+                            <field name="contract_id" placeholder="please select contract (set of conditions)"
+                                   domain="['|', '&amp;', ('state', '=', '1'), ('private_contract', '=', False), '&amp;', '&amp;', ('state', '=', '1'), ('private_contract', '=', True), ('private_contract_partner', '=', customer_id)]"
+                                   attrs="{'readonly': ['|', ('main_data_lock', '=', True), ('form_data_lock', '=', True)]}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                    <page	string="Schedule"	name="Schedule">
+
+                    <group col="2" string="Schedule">
+                        <group >
+                            <field name="order_created" attrs="{'readonly': True, 'invisible': [('order_created', '=', False)]}"/>
+                            <field name="date_set_new"  string="in schedule since" attrs="{'readonly': True, 'invisible': [('date_set_new', '=', False)]}" />
+                            <field name="date_planed" attrs="{'readonly': [('form_data_lock', '=', True)]}"/>
+                            <field name="date_realb" attrs="{'readonly': True, 'invisible': [('date_realb', '=', False)]}" />
+                            <field name="date_deadline" attrs="{'readonly': [('form_data_lock', '=', True)]}" />
+                            <field name="date_compleated"  string="Compleated" attrs="{'readonly': True, 'invisible': [('date_compleated', '=', False)]}" />
+                            <field name="date_reale"  string="Finished" attrs="{'readonly': True, 'invisible': [('date_reale', '=', False)]}" />
+                        </group>
+                        <group >
+                            <field name="on_hold" attrs="{'readonly': True}"/>
+                            <field name="date_paused" attrs="{'readonly': True, 'invisible': [('date_paused', '=', False)]}"/>
+                            <field name="date_released" attrs="{'readonly': True, 'invisible': [('date_released', '=', False)]}"/>
+                            <field name="cancel" attrs= "{'readonly' : True}"/>
+                            <field name="date_canceled" attrs= "{'readonly' : True, 'create': False, 'edit' : False, 'invisible': [('date_canceled', '=', False)]}"/>
+                            <field name="date_uncanceled" attrs= "{'readonly' : True, 'create': False, 'edit' : False, 'invisible': [('date_uncanceled', '=', False)]}"/>
+                            <field name="cancel_reason" attrs= "{'readonly' : True, 'invisible': [('cancel', '=', False), ('date_canceled', '=', False)]}"/>
+                            <field name="closed" attrs= "{'readonly' : True}" />
+                            <field name="date_closed" attrs= "{'readonly' : True, 'create': False, 'edit' : False, 'invisible': [('date_closed', '=', False)]}"/>
+                            <field name="date_reopen" attrs= "{'readonly' : True, 'create': False, 'edit' : False, 'invisible': [('date_reopen', '=', False)]}"/>
+                        </group>
+                    </group>
+                    </page>
+                        <page string="Notes" name="Notes">
+                            <field name="notes" />
+                        </page>
+                        <page string="Order operation sets list">
+                            <label string="This section contains list of operation sets. To add sets in 'selected' list first import contract sets.
+                                 (this will import single operations too - directly in operation list)
+                                 On accepting 'selected' will be moved to 'accepted'(selected list is clean up)
+                                 and contained operations will appear in operation list(duplications are skipped except already converted to tasks (operations) )."
+                                   nolabel="1"  colspan="6" />
+                            <separator/>
+                            <group string="Operation sets">
+                                <button 
+                                        name="import_contract_sets"  type="object" class="oe_highlight" string="Import contract sets"
+                                        icon= "fa-stack-exchange" attrs="{'invisible': ['|', '|', ['stage_id', 'in', [5]], ['cancel', '=', True], ['contract_operation_sets_imported', '=', True]]}">
+                                </button>
+                                <button 
+                                        name="accept_operations_sets"  type="object" class="oe_highlight" string="Accept operation sets"
+                                        icon= "fa-check" attrs="{'invisible': ['|', '|', ['stage_id', 'in', [5]], ['cancel', '=', True], ['contract_operation_sets_imported', '=', False]]}">
+                                </button>
+                                <field name="contract_operation_sets_imported" attrs="{'invisible': True}"/> 
+                            </group>
+                            <group col="2">
+                            <group>
+                                <field name="testt_txt" string="imp ids" attrs="{'invisible': True}"/>
+                                <field name="order_sets_ids"  string="Selected" attrs="{'readonly' : ['|', '|', ['stage_id', 'in', [5]], ['cancel', '=', True], ['contract_operation_sets_imported', '=', False]]}"/>
+                            </group>
+                            <group>
+                                <field name="accepted_sets" string="Accp ids" attrs="{'readonly': True, 'invisible': True}"/>
+                                <field name="accorder_sets_ids"  string="Accepted" attrs="{'readonly' : True}"/>
+                            <field name="contract_operation_imported" attrs="{'invisible': True}"/> 
+                            </group>
+                        </page>
+                        <page string="Order operation list" icon= "fa-play">
+                            <label string="This section contains list of accepted operations.
+                                 You can convert them to project tasks (operation list will be clean up during this process)." nolabel="1"  colspan="6" />
+                            <separator/>
+                            <group>
+                                <field name="test_txt" string="Opr ids" attrs="{'readonly': True, 'invisible': [['test_txt', '=', True]]}"/>
+                                <field name="order_operations_ids" string="Order operations" attrs="{'readonly' : ['|', '|', ['stage_id', 'in', [5]], ['cancel', '=', True], ['contract_operation_imported', '=', False]]}"/>
+                            </group>
+                            <group>
+                                <label for="project_id"/>
+                                <button 
+                                        name="convert_operations_to_tasks"  type="object" class="oe_highlight" string="Convert operations to tasks"
+                                        icon= "fa-exchange" attrs="{'invisible': ['|', '|', ['stage_id', 'in', [5]], ['cancel', '=', True], ['order_operations_ids', '=', [(6, False, [])]]]}">
+                                </button>
+                                <!-- buton and task heare convert_operations_to_tasks-->
+                            </group>
+                            </group>
+                        </page>
+                        <page string="Spare parts">
+                            <label string="This section contains list of spare parts and consumables according to tasks(operations)." nolabel="1"  colspan="4" />
+                            <group>
+
+                            </group>
+                        </page>
+                        <page string="Equipment">
+                            <label string="This section contains list of recommended equipment according to tasks(operations)." nolabel="1"  colspan="4" />
+                            <group>
+
+                        </page>
+                        <page string="Contract conditions">
+                            <field name="order_contract_conditions" attrs="{'readonly' : True}"/>
+                        </page>
+                        <page string="Other">
+
+                        </page>
+                    </notebook>
+
+                    <field name="main_data_lock" attrs="{'invisible': True}" />  
+                    <field name="form_data_lock" attrs="{'invisible': True}" />
+                    <field name="id" attrs="{'invisible': True}"/>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread" options='{"thread_level": 1}'/>
+                </div>
+            </form>
+        </field>
+        </record>
+
+        <!-- action orders list -->
+        <record model="ir.actions.act_window" id="autoservice.action_orders_list">
+            <field name="name">Autoservice orders</field>
+            <field name="res_model">autoservice.orders</field>
+            <field name="view_mode">tree,form</field>
+            <!-- <field name="view_mode">tree,form,calendar,gantt,graph</field> posible options -->
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new auto service order.
+                </p><p>
+                You will be able to manage your auto service orders.
+                </p>
+            </field>
+        </record>
+
+
+        <!-- vehicles  ==================================================================== -->
+        <!-- explicit vehicles list view definition-->
+        <record model="ir.ui.view" id="autoservice.vehicles_list">
+            <field name="name">Vehicles list</field>
+            <field name="model">autoservice.vehicles</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="order_ids"/>
+                    <field name="vin"/>
+                    <field name="body_no"/>
+                    <field name="eng_no"/>
+                    <field name="make"/>
+                    <field name="make_model"/>
+                    <field name="submodel"/>
+                    <field name="color"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- vehicle form  -->
+        <record model='ir.ui.view' id='autoservice.vehicles_form'>
+            <field name="name">autoservice.vehicles.form</field>
+            <field name="model">autoservice.vehicles</field>
+            <field name="arch" type="xml">
+                <form string="Order">
+                    <header>
+                        
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            
+                        </div>
+                        
+                        <div class="oe_title">
+                            <label for="make" class="oe_edit_only"/>
+                            <h1>
+                                <field name="make"  placeholder="make"/>
+                            </h1>
+                            <label for="make_model" class="oe_edit_only"/>
+                            <h2>
+                                <field name="make_model" class="oe_inline" placeholder=""/>
+                            </h2>
+                            <label for="submodel" class="oe_edit_only"/>
+                            <h2>
+                                <field name="submodel" class="oe_inline" placeholder=""/>
+                            </h2>
+                            <label for="modification" class="oe_edit_only"/>
+                            <h2>
+                                <field name="modification" class="oe_inline" placeholder=""/>
+                            </h2>
+                            
+                        </div>
+                        <group col="3" string="Vehicle data">
+                            <group col="2" string="Vehicle identification">
+                                <field name="vin"  placeholder="17 character(since 1970)" />
+                            </group>
+                            <group col="2" string="Vehicle description">
+                                <field name="color"  placeholder="color" />
+                            </group>
+                            <group col="2" string="Other">
+                                <field name="transmission"   />
+                                <field name="transmission_co"  placeholder="include reverse" />
+                                <field name="fuel"  placeholder="main fuel" />
+                            </group>
+                        </group>
+
+
+
+                        <notebook>
+                            <page	string="Notes"	name="notes">
+                                <field	name="notes"/>
+                            </page>
+                            <page	string='Owners' name="owners">
+                                <field name="owners"/>
+                            </page>
+                            <page	string='Service orders' name="orders">
+                                <field name="order_ids" string="Service orders for this vehicle"   attrs="{'readonly': True}" />
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread" options='{"thread_level": 1}'/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- action vehicles list -->
+        <record model="ir.actions.act_window" id="autoservice.action_vehicles_list">
+            <field name="name">Autoservice vehicles</field>
+            <field name="res_model">autoservice.vehicles</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click create to add a new vehicle.
+                </p><p>
+                You will be able to manage your client vehicles and
+                use data in auto service orders.
+                </p>
+            </field>
+        </record>
+
+        <!-- settings  == CONTRACT ================================================================== -->
+        <!-- explicit contract type list view definition-->
+        <record model="ir.ui.view" id="autoservice.contract_list">
+            <field name="name">Contracts list</field>
+            <field name="model">autoservice.autoservice</field>
+            <field name="arch" type="xml">
+                <tree decoration-warning="template_contract== True" decoratipn-bf= "state in ('Active')" decoration-danger="state in ('2')" decoration-primary="priority== True">
+                    <field name="name"/>
+                    <field name="contract_type_less"/>
+                    <field name="contract_created"/>
+                    <field name="private_contract_partner"/>
+                    <field name="state"/>
+                    <field name="template_contract"/>
+                    <field name="priority"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- contract type form-->
+        <record model="ir.ui.view" id="autoservice.contract_form">
+            <field name="name">Contracts form</field>
+            <field name="model">autoservice.autoservice</field>
+            <field name="arch" type="xml">
+                <form string="Contract">
+                    <header>
+                        <button name="action_aprove_contract"  type="object" class="oe_highlight" string="Aprove contract" icon= "fa-thumbs-up"
+                                confirm="Are you sure contract is ready for use?"
+                                attrs= "{'invisible': [['state', 'in', ('1', '2')]]}"> <!--confirm="Are you sure contract is ready for use?"-->
+                        </button>
+                        <button name="action_expire_contract"  type="object" class="oe_highlight" string="Deactivate contract"
+                                confirm="Please confirm contract deactivation?"
+                                icon= "fa-power-off" attrs= "{'invisible': [['state', 'in', ('0', '2')]]}">
+                        </button>
+                        <button name="action_edit_contract"  type="object" class="oe_highlight" string="Set as draft"
+                                confirm="Are you sure ?"
+                                icon= "fa-cogs" attrs= "{'invisible': [['state', 'in', ('0')]]}">
+                        </button>
+
+                         <field name="state"  widget="statusbar"  />
+                    </header>
+                    <sheet>
+                    <label for="name" class="oe_edit_only"/>
+                        <h2 class="o_row">
+                            <field name="priority" widget="priority"/>
+                            <field name="name"  placeholder="Contract name" attrs="{'readonly' : [('contract_data_lock', '=', True)]}"/>
+                        </h2>
+                        <separator/>
+                    <label for="contract_type_less" class="oe_edit_only"/>
+                    <h3>
+                        <field name="contract_type_less" placeholder="Short contract description" attrs="{'readonly' : [('contract_data_lock', '=', True)]}"/>
+                    </h3>
+                        <separator/>
+                        <separator/>
+                    <notebook>
+                        <page string="Contract data">
+                            <group>
+                                <field name="template_contract"/>
+                                <field name="contract_created" attrs="{'readonly' : True, 'invisible' : [('contract_created', '=', False)]}"/>
+                                <field name="contract_aproved" attrs="{'readonly' : True, 'invisible' : [('contract_aproved', '=', False)]}"/>
+                                <field name="contract_expired" attrs="{'readonly' : True, 'invisible' : [('contract_expired', '=', False)]}"/>
+                                <field name="expired_reason" attrs="{'readonly' : True, 'invisible' : [('contract_expired', '=', False)]}"/>
+                                <field name="contract_edit" attrs="{'readonly' : True, 'invisible' : [('contract_edit', '=', False)]}"/>
+                                <field name="contract_data_lock" attrs="{'invisible' : True}"/>
+                            </group>
+                        </page>
+                        <page string="Privacy options">
+                            <group>
+                                <field name="private_contract" attrs="{'readonly' : [('contract_data_lock', '=', True)]}"/>
+                                <field name="private_contract_partner" attrs="{'invisible' : [('private_contract', '=', False)], 'readonly' : [('contract_data_lock', '=', True)]}"/>
+                            </group>
+                        </page>
+                        <page string="Description">
+                            <field name="contract_type_descr" type="Html" attrs="{'readonly' : [('contract_data_lock', '=', True)]}"/>
+                        </page>
+                        <page string="Contract conditions">
+                            <field name="contract_conditions" attrs="{'readonly' : [('contract_data_lock', '=', True)]}"/>
+                        </page>
+                        <page string="Orders">
+                            <field name="orders_ids" attrs="{'readonly' : True}"/>
+                        </page>
+                        <page string="Operation sets">
+                            <field name="contract_sets_ids" attrs="{'readonly' : [('contract_data_lock', '=', True)]}"/> <!--TODO add cond state not in active-->
+                        </page>
+                        <page string="Operations">
+                            <field name="contract_operation_ids" attrs="{'readonly' : [('contract_data_lock', '=', True)]}"/>
+                        </page>
+                    </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- action autoservice list -->
+        <record model="ir.actions.act_window" id="autoservice.action_settings_contract_list">
+            <field name="name">Autoservice settings</field>
+            <field name="res_model">autoservice.autoservice</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click create to add a new contract type.
+                </p><p>
+                You will be able to manage your client contracts and
+                use data sets in auto service orders.
+            </p>
+            </field>
+        </record>
+
+
+        <!-- settings  == OPERATION ================================================================== -->
+        <!-- explicit operation list view definition-->
+        <record model="ir.ui.view" id="autoservice.operation_list">
+            <field name="name">Autoservice operation list</field>
+            <field name="model">autoservice.operation</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="asoperation_code"/>
+                    <field name="asoperation_value"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+
+        <!-- action asoperation list -->
+        <record model="ir.actions.act_window" id="autoservice.action_settings_operation_list">
+            <field name="name">Autoservice operation</field>
+            <field name="res_model">autoservice.operation</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click create to add a new operation.
+                </p><p>
+                You will be able to manage unique template operations
+                for needs of auto service orders.
+            </p>
+            </field>
+        </record>
+
+
+        <!-- settings  == SETS ================================================================== -->
+        <!-- explicit sets list view definition-->
+        <record model="ir.ui.view" id="autoservice.sets_list">
+            <field name="name">Autoservice sets list</field>
+            <field name="model">autoservice.sets</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- contract sets form-->
+        <record model="ir.ui.view" id="autoservice.sets_form">
+            <field name="name">Set form</field>
+            <field name="model">autoservice.sets</field>
+            <field name="arch" type="xml">
+                <form string="Operation set">
+                    <header>
+
+                    </header>
+                    <sheet>
+                        <label for="name" class="oe_edit_only"/>
+                        <h2 class="o_row">
+                            <field name="name"  placeholder="Set name" attrs="{'readonly' : False}"/>
+                        </h2>
+                        <separator/>
+
+                        <notebook>
+                            <page string="Operations in set">
+                                <group>
+                                    <field name="asoperation_ids"/>
+                                </group>
+                            </page>
+                            <page string="Privacy options">
+                                <group>
+
+                                </group>
+                            </page>
+                            <page string="Description">
+
+                            </page>
+                            <page string="Contract conditions">
+
+                            </page>
+                            <page string="Orders">
+
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- action assets list -->
+        <record model="ir.actions.act_window" id="autoservice.action_settings_sets_list">
+            <field name="name">Autoservice sets</field>
+            <field name="res_model">autoservice.sets</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click create to add a new set of operations.
+                    Set must have unique name like "On complete quality control".
+                </p><p>
+                You will be able to manage unique template sets
+                for needs of auto service orders.
+            </p>
+            </field>
+        </record>
+
+
+
+
+        <!-- menu  ===================================================================== -->
+        <!-- Top level menu item : no parent -->
+
+        <menuitem name="Autoservice" id="autoservice.menu_root" sequence="28"/>
+
+        <!-- menu categories
+
+        <menuitem name="Autoservice" id="autoservice.menu_0" sequence="10" parent="autoservice.menu_root" action="autoservice.action_dashboard"/>
+        -->
+        <menuitem name="Orders" id="autoservice.menu_orders" sequence="20" parent="autoservice.menu_root"/>
+        <menuitem name="Vehicles" id="autoservice.menu_vehicles" sequence="30" parent="autoservice.menu_root"/>
+        <menuitem name="Settings" id="autoservice.menu_settings" sequence="80" parent="autoservice.menu_root"/>
+
+        <!-- actions -->
+
+        <menuitem name=" Orders List" id="autoservice.menu_orders_list" parent="autoservice.menu_orders"
+                  action="autoservice.action_orders_list"/>
+        <menuitem name=" Vehicles List" id="autoservice.menu_vehicles_list" parent="autoservice.menu_vehicles"
+                  action="autoservice.action_vehicles_list"/>
+        <menuitem name="Contracts" id="autoservice.menu_settings_contracts" parent="autoservice.menu_settings"
+                  action="autoservice.action_settings_contract_list"/>
+
+        <menuitem name="Operations" id="autoservice.menu_settings_parent_operations" parent="autoservice.menu_settings"/>
+            <menuitem name="Auto service operations" id="autoservice.menu_settings_operations" parent="autoservice.menu_settings_parent_operations"
+                  action="autoservice.action_settings_operation_list"/>
+            <menuitem name="Auto service sets" id="autoservice.menu_settings_sets" parent="autoservice.menu_settings_parent_operations"
+                  action="autoservice.action_settings_sets_list"/>
+    </data>
+</openerp>

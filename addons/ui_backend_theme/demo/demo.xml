@@ -1,0 +1,30 @@
+<openerp>
+    <data>
+        <!--  -->
+          <record id="object0" model="ui.backend.theme">
+            <field name="name">color</field>
+            <field name="value">#585632</field>
+          </record>
+        <!--  -->
+        <!--   <record id="object1" model="ui_backend_theme.ui_backend_theme"> -->
+        <!--     <field name="name">Object 1</field> -->
+        <!--     <field name="value">10</field> -->
+        <!--   </record> -->
+        <!--  -->
+        <!--   <record id="object2" model="ui_backend_theme.ui_backend_theme"> -->
+        <!--     <field name="name">Object 2</field> -->
+        <!--     <field name="value">20</field> -->
+        <!--   </record> -->
+        <!--  -->
+        <!--   <record id="object3" model="ui_backend_theme.ui_backend_theme"> -->
+        <!--     <field name="name">Object 3</field> -->
+        <!--     <field name="value">30</field> -->
+        <!--   </record> -->
+        <!--  -->
+        <!--   <record id="object4" model="ui_backend_theme.ui_backend_theme"> -->
+        <!--     <field name="name">Object 4</field> -->
+        <!--     <field name="value">40</field> -->
+        <!--   </record> -->
+        <!--  -->
+    </data>
+</openerp>

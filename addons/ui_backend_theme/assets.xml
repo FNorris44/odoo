@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- path_to_your_module/views/assets.xml -->
+<openerp>
+  <data>
+    <template id="assets_backend" name="mail assets" inherit_id="web.assets_backend">
+      <xpath expr="." position="inside">
+        <script type="text/javascript" src="/ui_backend_theme/static/js/ui_support.js"></script>
+        <link rel="stylesheet" href="/ui_backend_theme/static/less/variables.less"/>
+        <link rel="stylesheet" href="/ui_backend_theme/static/less/style.less"/>
+        <script type="text/javascript" src="/ui_backend_theme/static/js/toggle_leftbar.js"></script>
+      </xpath>
+    </template>
+  </data>
+</openerp>

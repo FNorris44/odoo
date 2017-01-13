@@ -1,0 +1,1281 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* autoservice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20161219\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-19 20:10+0000\n"
+"PO-Revision-Date: 2016-12-19 20:10+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: autoservice
+#: model:ir.ui.menu,name:autoservice.menu_orders_list
+msgid " Orders List"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.menu,name:autoservice.menu_vehicles_list
+msgid " Vehicles List"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "17 character(since 1970)"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Accept operation sets"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Accepted"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_accorder_sets_ids
+msgid "Accepted operation sets"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_accepted_sets
+msgid "Accepted_sets"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Accp ids"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.autoservice,state:0
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_operation_active
+msgid "Active"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,fuel:0
+#: selection:autoservice.vehicles,fuel_second:0
+msgid "Alcohol"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.contract_form
+msgid "Aprove contract"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.contract_form
+msgid "Are you sure ?"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.contract_form
+msgid "Are you sure contract is ready for use?"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Are you sure you want to reopen order?"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model,name:autoservice.model_autoservice_orders
+msgid "Auto service Order"
+msgstr ""
+
+#. module: autoservice
+#: sql_constraint:autoservice.operation:0
+msgid "Auto service operation code already exists"
+msgstr ""
+
+#. module: autoservice
+#: sql_constraint:autoservice.operation:0
+msgid "Auto service operation name already exists"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.menu,name:autoservice.menu_settings_operations
+msgid "Auto service operations"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_project_project_x_autoservice_orders_ids
+msgid "Auto service order"
+msgstr ""
+
+#. module: autoservice
+#: sql_constraint:autoservice.orders:0
+msgid "Auto service order already exists"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_order_operations_ids
+msgid "Auto service order operations"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.menu,name:autoservice.menu_settings_sets
+msgid "Auto service sets"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.menu,name:autoservice.menu_root
+msgid "Autoservice"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.actions.act_window,name:autoservice.action_settings_operation_list
+msgid "Autoservice operation"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.actions.act_window,name:autoservice.action_orders_list
+msgid "Autoservice orders"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.actions.act_window,name:autoservice.action_settings_sets_list
+msgid "Autoservice sets"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.actions.act_window,name:autoservice.action_settings_contract_list
+msgid "Autoservice settings"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.actions.act_window,name:autoservice.action_vehicles_list
+msgid "Autoservice vehicles"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,fuel:0
+#: selection:autoservice.vehicles,fuel_second:0
+msgid "Benzin"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_body_no
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_body_no
+msgid "Body number"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,fuel:0
+#: selection:autoservice.vehicles,fuel_second:0
+msgid "CNG"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_date_canceled
+msgid "Cancel date"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Cancel order2"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_cancel_reason
+msgid "Cancel reason"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_cancel
+msgid "Canceled"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_vin
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_vin
+msgid "Chassis number-VIN:"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.actions.act_window,help:autoservice.action_settings_contract_list
+msgid "Click create to add a new contract type."
+msgstr ""
+
+#. module: autoservice
+#: model:ir.actions.act_window,help:autoservice.action_settings_operation_list
+msgid "Click create to add a new operation."
+msgstr ""
+
+#. module: autoservice
+#: model:ir.actions.act_window,help:autoservice.action_settings_sets_list
+msgid "Click create to add a new set of operations.\n"
+"                    Set must have unique name like \"On complete quality control\"."
+msgstr ""
+
+#. module: autoservice
+#: model:ir.actions.act_window,help:autoservice.action_vehicles_list
+msgid "Click create to add a new vehicle."
+msgstr ""
+
+#. module: autoservice
+#: model:ir.actions.act_window,help:autoservice.action_orders_list
+msgid "Click to create a new auto service order."
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_date_closed
+msgid "Close date"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Close order"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_closed
+msgid "Closed"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_color
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_color
+msgid "Color"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_color_no
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_color_no
+msgid "Color No"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_color_effect
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_color_effect
+msgid "Color effect"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_color_finish
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_color_finish
+msgid "Color finish"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_color_name
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_color_name
+msgid "Color name"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Compleated"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_contact_person
+msgid "Contact person"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_contract_id
+#: model:ir.ui.view,arch_db:autoservice.contract_form
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Contract"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_contract_aproved
+msgid "Contract aproved"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.contract_form
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+#: model:ir.ui.view,arch_db:autoservice.sets_form
+msgid "Contract conditions"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_contract_created
+msgid "Contract created"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.contract_form
+msgid "Contract data"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_contract_data_lock
+msgid "Contract data lock"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_contract_expired
+msgid "Contract expired"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_contract_conditions
+msgid "Contract general conditions"
+msgstr ""
+
+#. module: autoservice
+#: code:addons/autoservice/models/models.py:167
+#, python-format
+msgid "Contract must be selected before perform this operation"
+msgstr ""
+
+#. module: autoservice
+#: code:addons/autoservice/models/models.py:244
+#, python-format
+msgid "Contract must have at least one operation or set with at least one operation"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_name
+#: model:ir.ui.view,arch_db:autoservice.contract_form
+msgid "Contract name"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_contract_operation_imported
+msgid "Contract operation imported"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_contract_operation_sets_imported
+msgid "Contract operation sets imported"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_private_contract_partner
+msgid "Contract partner"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_contract_edit
+msgid "Contract unlocked for revision"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.menu,name:autoservice.menu_settings_contracts
+msgid "Contracts"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_transmission_co
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_transmission_co
+msgid "Count gears"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,help:autoservice.field_autoservice_operation_name
+msgid "Create unique name for operation template"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_create_uid
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_operation_create_uid
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_create_uid
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_sets_create_uid
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_stages_create_uid
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_create_date
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_operation_create_date
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_create_date
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_sets_create_date
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_stages_create_date
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,help:autoservice.field_autoservice_orders_stage_id
+msgid "Current stage of Auto service order"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_customer_id
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Customer"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.contract_form
+msgid "Deactivate contract"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_date_deadline
+msgid "Deadline"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_stages_stage_descr
+#: model:ir.ui.view,arch_db:autoservice.contract_form
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+#: model:ir.ui.view,arch_db:autoservice.sets_form
+msgid "Description"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_display_name
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_operation_display_name
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_display_name
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_sets_display_name
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_stages_display_name
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.autoservice,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,eng_type:0
+msgid "Electric engine"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,fuel:0
+#: selection:autoservice.vehicles,fuel_second:0
+msgid "Electro"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_date_reale
+msgid "End date"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_eng_type
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_eng_type
+msgid "Eng type"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_eng_no
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_eng_no
+msgid "Engine number"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.autoservice,state:0
+msgid "Expired"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_expired_reason
+msgid "Expired reason"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Finished"
+msgstr ""
+
+#. module: autoservice
+#: code:addons/autoservice/models/models.py:38
+#, python-format
+msgid "For activating private contract select partner first."
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_form_data_lock
+msgid "Form data edit lock"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_fuel
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_fuel
+msgid "Fuel"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_fuel_second
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_fuel_second
+msgid "Fuel second"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,fuel:0
+#: selection:autoservice.vehicles,fuel_second:0
+msgid "Hidrogen"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.autoservice,priority:0
+#: selection:autoservice.orders,priority:0
+msgid "High"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_id
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_operation_id
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_id
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_sets_id
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_stages_id
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_id
+msgid "ID"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Import contract sets"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_contract_sets_ids
+msgid "Included operation sets"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_contract_operation_ids
+msgid "Included operations"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,help:autoservice.field_autoservice_operation_operation_order
+msgid "Integer value to resolve default order in operation list"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,help:autoservice.field_autoservice_sets_sets_order
+msgid "Integer value to resolve default order in sets list"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,eng_type:0
+msgid "Internal comb. engine"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,fuel:0
+#: selection:autoservice.vehicles,fuel_second:0
+msgid "LPG"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice___last_update
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_operation___last_update
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders___last_update
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_sets___last_update
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_stages___last_update
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_write_uid
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_operation_write_uid
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_write_uid
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_sets_write_uid
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_stages_write_uid
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_write_date
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_operation_write_date
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_write_date
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_sets_write_date
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_stages_write_date
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_license_plate
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_license_plate
+msgid "License plate"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_main_data_lock
+msgid "Main data edit lock"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_make
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_make
+msgid "Make"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_make_model
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_make_model
+msgid "Model"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_modification
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_modification
+msgid "Modification"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_stages_stage
+msgid "Name"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.autoservice,priority:0
+#: selection:autoservice.orders,priority:0
+msgid "Normal"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_notes
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_notes
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "Notes"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_operation_asoperation_value
+msgid "Operation Value"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_operation_name
+msgid "Operation name- unique"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_operation_operation_order
+msgid "Operation order"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.sets_form
+msgid "Operation set"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.contract_form
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Operation sets"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_sets_asoperation_ids
+#: model:ir.ui.menu,name:autoservice.menu_settings_parent_operations
+#: model:ir.ui.view,arch_db:autoservice.contract_form
+msgid "Operations"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.sets_form
+msgid "Operations in set"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Opr ids"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "Order"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_order_created
+msgid "Order created"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_date_draft
+msgid "Order creation date"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Order manager"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Order operation list"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Order operation sets list"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Order operations"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_orders_ids
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_order_ids
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_order_ids
+#: model:ir.ui.menu,name:autoservice.menu_orders
+#: model:ir.ui.view,arch_db:autoservice.contract_form
+#: model:ir.ui.view,arch_db:autoservice.sets_form
+msgid "Orders"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Other"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_owners
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_owners
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "Owners"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Pause order"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_on_hold
+msgid "Paused"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_date_planed
+msgid "Planed date"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.contract_form
+msgid "Please confirm contract deactivation?"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_priority
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_priority
+msgid "Priority"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.contract_form
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+#: model:ir.ui.view,arch_db:autoservice.sets_form
+msgid "Privacy options"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model,name:autoservice.model_project_project
+msgid "Project"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Project (Analytic account)"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Referent No"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_ref_nom
+msgid "Referent number"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_project_id
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Related project"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_date_released
+msgid "Release date"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Release order"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_date_reopen
+msgid "Reopen date"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Reopen order"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_resp_user_id
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Responsible manager"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Schedule"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Selected"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_order_sets_ids
+msgid "Selected operation sets"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_stages_stage_sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_nom
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Service order"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "Service orders"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "Service orders for this vehicle"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_date_compleated
+msgid "Set as Compleated"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_date_set_new
+msgid "Set as New"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.contract_form
+msgid "Set as draft"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,help:autoservice.field_autoservice_sets_name
+msgid "Set contains operations, spare parts and consumatives"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_sets_name
+#: model:ir.ui.view,arch_db:autoservice.sets_form
+msgid "Set name"
+msgstr ""
+
+#. module: autoservice
+#: sql_constraint:autoservice.sets:0
+msgid "Set name already exists"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_sets_sets_order
+msgid "Set order"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Set stage Compleated"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Set stage Finished"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Set stage In progres"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Set stage New"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.menu,name:autoservice.menu_settings
+msgid "Settings"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.contract_form
+msgid "Short contract description"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_stage_id
+msgid "Stage"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_stages_stage_value
+msgid "Stage value"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_date_realb
+msgid "Start date"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_state
+msgid "State"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,eng_type:0
+msgid "Steam engine"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_date_paused
+msgid "Stop date"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_submodel
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_submodel
+msgid "Submodel"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,help:autoservice.field_autoservice_autoservice_template_contract
+msgid "Template can not be set active, its purpose is to be duplicated"
+msgstr ""
+
+#. module: autoservice
+#: code:addons/autoservice/models/models.py:40
+#, python-format
+msgid "Template can not be set active, its purpose is to be replicated"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_template_contract
+msgid "Template contract"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,help:autoservice.field_autoservice_operation_asoperation_value
+msgid "This value is multiplayer for operation unit"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_transmission
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_vehicles_transmission
+msgid "Transmission"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_contract_type_descr
+msgid "Type (contract) long description"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_contract_type_less
+msgid "Type short description"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Unancel order"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_date_uncanceled
+msgid "Uncancel date"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_operation_asoperation_code
+msgid "Unique operation code"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,help:autoservice.field_autoservice_stages_stage_sequence
+msgid "Used to order the note stages"
+msgstr ""
+
+#. module: autoservice
+#: sql_constraint:autoservice.vehicles:0
+msgid "VIN nomber already exists"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_vhk_id
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "Vehicle"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "Vehicle data"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "Vehicle description"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "Vehicle identification"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.menu,name:autoservice.menu_vehicles
+msgid "Vehicles"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.actions.act_window,help:autoservice.action_settings_operation_list
+msgid "You will be able to manage unique template operations\n"
+"                for needs of auto service orders."
+msgstr ""
+
+#. module: autoservice
+#: model:ir.actions.act_window,help:autoservice.action_settings_sets_list
+msgid "You will be able to manage unique template sets\n"
+"                for needs of auto service orders."
+msgstr ""
+
+#. module: autoservice
+#: model:ir.actions.act_window,help:autoservice.action_orders_list
+msgid "You will be able to manage your auto service orders."
+msgstr ""
+
+#. module: autoservice
+#: model:ir.actions.act_window,help:autoservice.action_settings_contract_list
+msgid "You will be able to manage your client contracts and\n"
+"                use data sets in auto service orders."
+msgstr ""
+
+#. module: autoservice
+#: model:ir.actions.act_window,help:autoservice.action_vehicles_list
+msgid "You will be able to manage your client vehicles and\n"
+"                use data in auto service orders."
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,transmission:0
+msgid "automatic"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model,name:autoservice.model_autoservice_autoservice
+msgid "autoservice.autoservice"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model,name:autoservice.model_autoservice_operation
+msgid "autoservice.operation"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model,name:autoservice.model_autoservice_sets
+msgid "autoservice.sets"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model,name:autoservice.model_autoservice_stages
+msgid "autoservice.stages"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model,name:autoservice.model_autoservice_vehicles
+msgid "autoservice.vehicles"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "color"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "color_efect"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,fuel:0
+#: selection:autoservice.vehicles,fuel_second:0
+msgid "diesel"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "e.g. YY MM No__"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "e.g. claim No"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "engine full number"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "if any"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "imp ids"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "in schedule since"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "include reverse"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "indiv.name of color(if any)"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_autoservice_private_contract
+msgid "is private contract"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,color_finish:0
+msgid "lack"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "main fuel"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "make"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "make color No"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,transmission:0
+msgid "manual"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,color_finish:0
+msgid "matt"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,color_effect:0
+msgid "metallik"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,color_effect:0
+msgid "multi"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,eng_type:0
+#: selection:autoservice.vehicles,transmission:0
+msgid "other"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,color_effect:0
+msgid "perl"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "please select contract (set of conditions)"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.orders_form
+msgid "responsible user"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,color_finish:0
+msgid "saten"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "second fuel"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,transmission:0
+msgid "semi automatic"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,color_finish:0
+msgid "structure matt"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.ui.view,arch_db:autoservice.vehicles_form
+msgid "surface effect"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_test_txt
+msgid "test field"
+msgstr ""
+
+#. module: autoservice
+#: model:ir.model.fields,field_description:autoservice.field_autoservice_orders_testt_txt
+msgid "test field 2"
+msgstr ""
+
+#. module: autoservice
+#: selection:autoservice.vehicles,color_effect:0
+msgid "uni"
+msgstr ""
+
